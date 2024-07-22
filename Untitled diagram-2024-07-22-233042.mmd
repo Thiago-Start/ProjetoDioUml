@@ -1,0 +1,39 @@
+classDiagram
+    class Iphone {
+        +main(String[] args)
+    }
+
+    class SmartPhone {
+        +selecionarMusica()
+        +tocar()
+        +pausar()
+        +exibirPaginas()
+        +adicionarNovaAba()
+        +atualizarPagina()
+        +ligar()
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class ReproutorMusical {
+        +selecionarMusica()
+        +tocar()
+        +pausar()
+    }
+
+    class NavegadorInternet {
+        +exibirPaginas()
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class AparelhoTelefonico {
+        +ligar()
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    Iphone --> SmartPhone : uses
+    SmartPhone <|-- ReproutorMusical : implements
+    SmartPhone <|-- NavegadorInternet : implements
+    SmartPhone <|-- AparelhoTelefonico : implements
